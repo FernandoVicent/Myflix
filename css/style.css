@@ -29,31 +29,12 @@
     margin:10px;
 
 }
-.conteudo{
-    display: grid;
-}
-#container{
-    display: grid;
+.carousel{
+    width: 20%;
+    margin: 0 auto;
+
 }
 
-#container > div {
-    
-    background-color: #8ca0ff;
-    width: 400px;
-    height: 400px;
-}
-body > img {
-  padding:15px;
-  margin: 20px 10px;
-  width: 15%;
-  height:15%;
-}
-img {
-  display: inline-block ;
-  width: 10%;
-  max-height: 450px;
-  border-radius:5px;
-}
 #btn-search{
     color: #59bbc2;
     border-color: #59bbc2;
