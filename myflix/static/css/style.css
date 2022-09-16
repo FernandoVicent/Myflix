@@ -1,9 +1,10 @@
 body {
-  height: 100%;
+  text-align:center;
   background: rgb(2,0,36);
   background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(30,21,42,1) 35%, rgba(0,212,255,1) 100%); 
   background-repeat:no-repeat;
-  text-align: center;
+  width:100%;
+  
 }
 #nav-logo{
     font-size:30px;
@@ -20,11 +21,12 @@ body {
 #form-pesquisa li{
     padding: 20px;
 }
+
 #pesquisa{
     margin-right:10px;
     align-content: space-around;
-    
     width:70%;
+
     }
 #menu{
   background-color: #C8C8C8;
@@ -33,7 +35,8 @@ body {
     margin:10px;
 }
 .conteudo{
-  height: 80%;
+    display:flex
+    height: 80%;
 }
 .apresentacao-slider{
   height: 500px;
@@ -60,10 +63,11 @@ body {
     background-color:#59bbc2 ;
     color: white;
 }
-.rodape{
-    position: fixed;
-    bottom:0;
-    left:0;
+#footer{
+    background-color:#C8C8C8;}
+
+#page-content {
+  flex: 1 0 auto;
 }
 #login{
     color: #59bbc2;;
