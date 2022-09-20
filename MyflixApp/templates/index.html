@@ -12,55 +12,14 @@
     </div>
   
   <h3 class="titulo-filmes">Mais assistidos</h3>
-  <div class="carousel-asistidos">
-    <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/5qoBMPkhmbDeTH8SEkY3V2flewD.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/uQWgSRXeYRWCvGIX9LDNBW6XBYD.jpg"></div>
-     
-     <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-   
-   </div>
-      <h3 class="titulo-filmes">Filmes de Terror</h3>
-      <div class="carousel-asistidos">
-    <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/5qoBMPkhmbDeTH8SEkY3V2flewD.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/uQWgSRXeYRWCvGIX9LDNBW6XBYD.jpg"></div>
-
-     <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
-
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-
-   </div>
+      <div class="container">
+          {% for x in video %}
+          <h3 class="text-center mt-2 mb-2">{{x.nome_filme}}</h3>
+          <video class="video-fluid">
+              <source src="{{ x.video.url }}" type="video/mp4" />
+          </video>
+          {% endfor %}
+      </div>
 
    </main>
     
