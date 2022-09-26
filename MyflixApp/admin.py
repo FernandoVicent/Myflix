@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import Myflix
+from MyflixApp.models import Myflix, Genero
 
 admin.site.register(Myflix)
+admin.site.register(Genero)
+
+
+

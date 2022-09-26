@@ -34,12 +34,10 @@ body {
 #menu a{
     margin:10px;
 }
-.conteudo{
-    display:flex
-    height: 80%;
-}
+
 .apresentacao-slider{
-  height: 500px;
+    width: 100%;
+    height: 500px;
 }
 
 .titulo-filmes{
@@ -48,11 +46,8 @@ body {
   color: white;
 }
 .carousel-asistidos {
-  width: 98%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+    margin-left: 40px;
+    width: 90%;
 }
 
 #btn-search{
@@ -66,9 +61,7 @@ body {
 #footer{
     background-color:#C8C8C8;}
 
-#page-content {
-  flex: 1 0 auto;
-}
+
 #login{
     color: #59bbc2;;
     text-align: center;

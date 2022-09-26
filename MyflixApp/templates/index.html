@@ -10,16 +10,39 @@
       <img src="https://diariodorio.com/wp-content/uploads/2021/10/Duna-1.jpg">
       <img src="https://cloud.estacaonerd.com/wp-content/uploads/2022/07/22192001/Agente-Oculto-Netflix-Irmaos-Russo-Posteres.jpg">
     </div>
-  
-  <h3 class="titulo-filmes">Mais assistidos</h3>
-      <div class="container">
+          {%for g in genero %}
+          <div class="generos">
+              <h2>{{ g.generos_filmes }}</h2>
+              {%endfor%}
+
+
+
+
+
+      <div class="carousel-asistidos">
+
+
+
+
           {% for x in video %}
-          <h3 class="text-center mt-2 mb-2">{{x.nome_filme}}</h3>
-          <video class="video-fluid">
-              <source src="{{ x.video.url }}" type="video/mp4" />
-          </video>
+
+                <a href="{{ x.file_video.url }}">
+                    <div class="filmes">
+                     <h2>{{ x.gener.url }}</h2>
+                    <img  class="filmes-capa" src="{{ x.capa_filme.url }}">
+                    </div>
+                </a>
+
+
+
           {% endfor %}
+
+
       </div>
+
+
+
+
 
    </main>
     
