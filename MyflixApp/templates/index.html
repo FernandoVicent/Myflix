@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+  {%load static%}
+    {% block content %}
+      {% include 'partials/menu.html' %}
+
+  <main class="conteudo">
+    <div class="apresentacao-slider">
+      <img src="https://cultura.minha.com.br/wp-content/uploads/sites/4/2021/11/HOMEM-ARANHA.jpg">
+      <img src="https://static.brasilsemmedo.com/uploads/2022/05/30/maverick-1.jpg">
+      <img src="https://diariodorio.com/wp-content/uploads/2021/10/Duna-1.jpg">
+      <img src="https://cloud.estacaonerd.com/wp-content/uploads/2022/07/22192001/Agente-Oculto-Netflix-Irmaos-Russo-Posteres.jpg">
+    </div>
+
+        {%for c in generos %}
+        <h2 class="titulo-filmes"> {{ c }}</h2>
+
+        <div class="carousel-asistidos">
+
+
+          {% for x in video %}
+
+
+          {% if x.categoria == c   %}
+
+                <a href="{{ x.file_video.url }}">
+                    <div class="filmes">
+
+                    <img  class="filmes-capa" src="{{ x.capa_filme.url }}">
+                    </div>
+                </a>
+          {%endif%}
+
+
+
+          {% endfor %}<!-- for dos filmes -->
+
+
+
+      </div>
+      {% endfor %}<!--for do generos -->
+
+
+
+
+
+   </main>
+
+
+
+    {% include 'partials/footer.html'%}
+{%endblock%}
