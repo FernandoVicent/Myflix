@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0-9c0)&))sqm7b8xhuw-20icnrjx6@52=ij9s@r^l6@i-b%5c2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://projeto-myflix.herokuapp.com/']
 
 
 # Application definition
