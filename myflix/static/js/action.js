@@ -19,7 +19,15 @@ $('.carousel-asistidos').slick({
         arrows: true,
         centerMode: true,
         centerPadding: '20px',
-        slidesToShow: 6
+        slidesToShow: 6,
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 5,
       }
     },
     {
@@ -27,8 +35,7 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '10px',
-        slidesToShow: 4
+        slidesToShow: 3,
       }
     },
     {
@@ -36,9 +43,8 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '10px',
-        slidesToShow: 4
+        slidesToShow: 2,
       }
-    }
+    },
   ]
 });
