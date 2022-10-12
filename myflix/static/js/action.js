@@ -16,7 +16,7 @@ $('.carousel-asistidos').slick({
         arrows: false,
         centerMode: true,
         centerPadding: '20px',
-        slidesToShow: 5
+        slidesToShow: 3
       }
     },
     {
@@ -25,7 +25,7 @@ $('.carousel-asistidos').slick({
         arrows: false,
         centerMode: true,
         centerPadding: '40px',
-        slidesToShow: 6
+        slidesToShow: 3
       }
     },
     {
@@ -33,7 +33,7 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '2px',
+        centerPadding: '5px',
         slidesToShow: 4
       }
     }
