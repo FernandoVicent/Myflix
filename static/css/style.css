@@ -6,9 +6,15 @@ body {
   width:100%;
   
 }
+h1{
+    color: white;
+}
 .cabecalho{
     display:flex;
     width:100%;
+}
+.container{
+
 }
 #nav-logo{
     font-size:30px;
@@ -17,10 +23,9 @@ body {
 }
 #form-pesquisa{
     padding: 20px;
-    margin-left: 100px;
     display: flex;
     flex-wrap:wrap;
-    width:400px;
+    
 }
 #form-pesquisa li{
     padding: 20px;
@@ -29,7 +34,7 @@ body {
 #pesquisa{
     margin-right:10px;
     align-content: space-around;
-    width:70%;
+    width:100%;
 
     }
 #menu{
@@ -78,6 +83,7 @@ button{
     left: -40px;
 }
 #login{
+    margin-right: 40px;
     color: #59bbc2;;
     text-align: center;
     background-color: ;
@@ -127,6 +133,31 @@ button{
 @media screen and (max-width:  1200px){
     body{
         background-color: red;
+    }
+    .cabecalho{
+    display:flex;
+    width:100%;
+}
+    #nav-logo{
+        font-size:5px;
+        color: #59bbc2;
+        font-family: 'Morfelan';
+}
+    #form-pesquisa{
+        padding: 5px;
+        display: flex;
+        flex-wrap:wrap;
+    
+}
+    #form-pesquisa li{
+        padding: 5px;
+}
+
+    #pesquisa{
+        margin-right:10px;
+        align-content: space-around;
+        width:100%;
+
     }
     .apresentacao-slider{
     width: 100%;
