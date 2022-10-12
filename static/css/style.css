@@ -78,10 +78,11 @@ h1{
     width:200px;
     height:300px;
 }
-button{
-    position: absolute;
-    left: -40px;
+#footer img{
+    width: 50px;
+    height: 50px;
 }
+
 #login{
     margin-right: 40px;
     color: #59bbc2;;
@@ -97,6 +98,14 @@ button{
 #login:hover{
     background-color: #59bbc2;
     color: white;
+}
+.about{
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1px 0px 2px #d5f0ec;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: #000;
 }
 @media screen and (max-width:  480px){
     body{
@@ -131,9 +140,6 @@ button{
     height:100px;}
 }
 @media screen and (max-width:  1200px){
-    body{
-        background-color: red;
-    }
     .cabecalho{
     display:flex;
     width:100%;

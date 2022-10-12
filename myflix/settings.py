@@ -143,8 +143,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
 AWS_ACCESS_KEY_ID = 'AKIAXS64FRD6RBFTIFCQ'
+
 AWS_SECRET_ACCESS_KEY = '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'
+
 AWS_STORAGE_BUCKET_NAME = 'projeto-myflix'
+
 
 AWS_S3_FILE_OVERWRITE = False
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

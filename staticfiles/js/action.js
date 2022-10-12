@@ -9,11 +9,12 @@ $('.carousel-asistidos').slick({
   centerMode: true,
   centerPadding: '40px',
   slidesToShow: 6,
+  arrows: true
   responsive: [
     {
       breakpoint: 1200,
       settings: {
-        arrows: false,
+        arrows: true
         centerMode: true,
         centerPadding: '20px',
         slidesToShow: 3

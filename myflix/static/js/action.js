@@ -9,31 +9,34 @@ $('.carousel-asistidos').slick({
   centerMode: true,
   centerPadding: '40px',
   slidesToShow: 6,
+  arrows: true,
+  prevArrow:"<img class='a-left control-c prev slick-prev' src='https://projeto-myflix.s3.amazonaws.com/icons/left-arrow.png'>",
+  nextArrow:"<img class='a-right control-c next slick-next' src='https://projeto-myflix.s3.amazonaws.com/icons/right-arrow.png'>",
   responsive: [
     {
       breakpoint: 1200,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '20px',
-        slidesToShow: 3
+        slidesToShow: 6
       }
     },
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
+        centerPadding: '10px',
+        slidesToShow: 4
       }
     },
     {
       breakpoint: 480,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '5px',
+        centerPadding: '10px',
         slidesToShow: 4
       }
     }
