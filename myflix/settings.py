@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -141,8 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
-AWS_ACCESS_KEY_ID = 'AKIAXS64FRD6SAAJTAMW'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAXS64FRD6RBFTIFCQ'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'projeto-myflix'
 
 AWS_S3_FILE_OVERWRITE = False
