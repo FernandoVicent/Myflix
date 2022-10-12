@@ -228,6 +228,9 @@ h1{
 /*-------------- 992 ATÉ 1200 -------------------- */
 
 @media screen and (min-width:992px){
+    #pesquisa{
+        width: 30%;
+    }
 
     .titulo-filmes{
     margin-left: 42px;
@@ -263,6 +266,9 @@ height: 414px;
 }
 /*-------------- 1200 PRA 1400 -------------------- */
 @media screen and (min-width:1200px){
+    #pesquisa{
+        width: 30%;
+    }
     .titulo-filmes{
     margin-left: 32px;
     text-align: left;
@@ -298,6 +304,9 @@ height: 414px;
 
 /*-------------- 1400 -------------------- */
 @media screen and (min-width:1400px){
+    #pesquisa{
+        width: 30%;
+    }
     .titulo-filmes{
 
     margin-left: 48px;
