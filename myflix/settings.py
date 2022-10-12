@@ -121,13 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myflix/static')
-]
+
 
 
 
@@ -140,10 +134,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
 AWS_ACCESS_KEY_ID = 'AKIAXS64FRD6SAAJTAMW'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'projeto-myflix'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+AWS_DEFAULT_ACL = 'public-read'
 
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = 'None'
+AWS_LOCATION = 'static'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myflix/static')
+]
+
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'core.storages.MediaStore'
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
