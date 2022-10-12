@@ -144,7 +144,7 @@ AWS_SECRET_ACCESS_KEY = 'KSWBH5Dm0gYBJ+t2kixLeu5/Y5UGQGphgc5Ts1uI'
 AWS_STORAGE_BUCKET_NAME = 'projeto-myflix'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-AWS_DEFAULT_ACL = None
+AWS_DEFAULT_ACL = 'public-read'
 
 AWS_LOCATION = 'static'
 
