@@ -18,7 +18,6 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '80px',
         slidesToShow: 5,
       }
     },
@@ -27,7 +26,6 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '120px',
         slidesToShow: 4,
       }
     },
@@ -36,7 +34,7 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '60px',
+        
         slidesToShow: 4,
       }
     },
@@ -45,7 +43,7 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '40px',
+        
         slidesToShow: 3,
       }
     },
@@ -54,7 +52,6 @@ $('.carousel-asistidos').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        centerPadding: '30px',
         slidesToShow: 2,
       }
     },
