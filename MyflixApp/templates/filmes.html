@@ -3,8 +3,63 @@
 {% block content %}
 
 {% include 'partials/menu.html' %}
+<main class='conteudo-info'>
+    <section id="banner" >
+        <img src="{{ post.capa_filme.url}}">
+        
+        <div class="info">
+        
+        <hr>
+        <h4>Sinopse</h4>
+        <p>{{post.sinospse}}</p>
+        <hr>
+        <h5>Elenco</h5>
+        <p>{{post.elenco}}</p><hr>
+        <p>{{post.tempo_filme}} min | +{{post.classificacao}} | {{post.lancamento}}</p>
+        <p>{{post.categoria}}</p>
+        <hr>
+        <a href="{{post.file_video.url}}"><span class="btn"><i class="fa fa-play" aria-hidden="true"></i>  Play</span></a>
+        </div>
 
-	<h1>Em breve</h1>
+        
+    </section>
+    <section>
+        <h2 class="titulo-filmes">
+            Filmes Semelhantes
+        </h2>
+        
+        <div class="carousel-asistidos">
+
+
+          {% for x in video %}
+          
+                {% if post.categoria == x.categoria %}
+
+                     <a class="total" href="{% url 'movie-detail' x.uuid %}">
+
+
+                    <div class="filmes">
+
+                    <img  class="filmes-capa" src="{{ x.capa_filme.url }}">
+                    </div>
+                </a>
+                {%endif%}
+
+        
+            {% endfor %}<!-- for dos filmes -->
+            </div>
+        
+          
+
+
+
+          
+    </section>
+        
+        
+</main>
+
+
 
 {% include 'partials/footer.html'%}
 {% endblock%}

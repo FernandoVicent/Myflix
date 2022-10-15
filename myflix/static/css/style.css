@@ -1,5 +1,4 @@
 body {
-  text-align:center;
   background: rgb(2,0,36);
   background-repeat:no-repeat;
   width:100%;
@@ -24,6 +23,7 @@ h1{
 }
 
 .titulo-filmes{
+    margin-bottom: 14px;
     margin-left: 38px;
     text-align: left;
     padding: 30px 0px 0px 0px;
@@ -47,12 +47,6 @@ h1{
     height:8%;
     margin: 160px 28px;
 }
-
-.filmes-capa{
-    display: block;
-    width:200px;
-    height:300px;
-}
 #footer{
     margin-top: 20px;
 }
@@ -69,14 +63,28 @@ h1{
     height: 50px;
 }
 
+
 /*------------------------------------- RESPONSIVO --------------------------------------- */
 
 /*------------------------------------- 0 ATÉ 480 --------------------------------------- */
 @media screen and (min-width:0px){
-    #pesquisa{
-        width: 70%;
+    #cabecalho{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;        
+        
     }
-    .titulo-filmes{
+
+    #cabecalho nav{
+        width: 100%;        
+        
+    }
+    
+    #cabecalho input{
+        width: 80px;
+        margin-right: 10px;
+    }
+    .titulo-filmes{    
     margin-left: 32px;
     text-align: left;
     padding: 30px 0px 0px 0px;
@@ -84,7 +92,7 @@ h1{
 }
     .logo{
     text-align: center;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 0px 0px 0px;
     font-size: 20px;
 }
     .apresentacao-slider{
@@ -95,11 +103,12 @@ h1{
     z-index: 1;
     position: absolute;
     height:8%;
-    margin: 152px 28px;
+    margin: 112px 28px;
 }
-    .filmes .filmes-capa{
-        width:170px;
-        height:280px;
+    .total .filmes .filmes-capa{
+        max-width: 325px;
+        height: 203px;
+        
     }
 
     .about img{
@@ -138,9 +147,10 @@ h1{
     height:8%;
     margin: 164px 28px;
 }
-    .filmes .filmes-capa{
-        width:200px;
-        height:300px;
+    .total .filmes .filmes-capa{
+        max-width: 325px;
+        height: 353px;
+        
     }
 
     .about img{
@@ -176,9 +186,9 @@ h1{
     height:8%;
     margin: 168px 28px;
 }
-    .filmes .filmes-capa{
-       width: 175px;
-       height: 308px;
+    .total .filmes .filmes-capa{
+        max-width: 225px;
+        height: 253px;
     }
 
     .about img{
@@ -214,9 +224,9 @@ h1{
     height:8%;
     margin: 168px 28px;
 }
-    .filmes .filmes-capa{
-        width: 180px;
-        height: 310px;
+    .total .filmes .filmes-capa{
+        max-width: 178px;
+        height: 315px;
     }
        .about img{
     margin-right:10px;
@@ -252,11 +262,12 @@ h1{
     z-index: 1;
     position: absolute;
     height:8%;
-    margin: 226px 28px;
+    margin: 198px 28px;
 }
-    .filmes .filmes-capa{
-        width: 265px;
-height: 414px;
+    .total .filmes .filmes-capa{
+        max-width: 225px;
+        height: 353px;
+        width: auto;
     }
           .about img{
     margin-right:10px;
@@ -289,11 +300,12 @@ height: 414px;
     z-index: 1;
     position: absolute;
     height:8%;
-    margin: 216px 28px;
+    margin: 198px 28px;
 }
-    .filmes .filmes-capa{
-        width: 239px;
-        height: 398px;
+    .total .filmes .filmes-capa{
+        max-width: 225px;
+        height: 353px;
+        width: auto;
     }
           .about img{
     margin-right:10px;
@@ -328,12 +340,13 @@ height: 414px;
     z-index: 1;
     position: absolute;
     height:8%;
-    margin: 224px 28px;
+    margin: 198px 28px;
 }
 
-    .filmes .filmes-capa{
-        width: 223px;
-        height: 404px;
+    .total{
+        max-width: 225px;
+        height: 353px;
+        width: auto;
     }
           .about img{
     margin-right:10px;

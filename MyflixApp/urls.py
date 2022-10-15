@@ -1,7 +1,8 @@
 from django.urls import path
+from django.shortcuts import render
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('filmes', views.filmes, name='filmes')
+    path('<str:uuid>/', views.detail,name='movie-detail')
 ]

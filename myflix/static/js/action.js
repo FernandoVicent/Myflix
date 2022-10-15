@@ -7,7 +7,7 @@ $('.apresentacao-slider').slick({
 
 $('.carousel-asistidos').slick({
   centerMode: true,
-  centerPadding: '40px',
+  centerPadding: '50px',
   slidesToShow: 6,
   arrows: true,
   prevArrow:"<img class='a-left control-c prev slick-prev' src='https://projeto-myflix.s3.amazonaws.com/icons/left-arrow.png'>",
