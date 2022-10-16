@@ -1,65 +1,96 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
 {% include 'partials/menu.html' %}
-<main class='conteudo-info'>
-    <section id="banner" >
-        <img src="{{ post.capa_filme.url}}">
-        
-        <div class="info">
-        
-        <hr>
-        <h4>Sinopse</h4>
-        <p>{{post.sinospse}}</p>
-        <hr>
-        <h5>Elenco</h5>
-        <p>{{post.elenco}}</p><hr>
-        <p>{{post.tempo_filme}} min | +{{post.classificacao}} | {{post.lancamento}}</p>
-        <p>{{post.categoria}}</p>
-        <hr>
-        <a href="{{post.file_video.url}}"><span class="btn"><i class="fa fa-play" aria-hidden="true"></i>  Play</span></a>
+<main class="conteudo">
+    <section class="container">
+        <div class="caixa-informacoes">
+            <div id="player">   </div>
+            <div class="informacoes">
+                
+                <h4>Sinopse</h4>
+                <p>{{post.sinospse}}</p>
+                <hr>
+                <h4>Elenco</h4>
+                
+                <p>{{post.elenco}}</p>
+                <hr>
+                <p>{{post.tempo_filme}} min | +{{post.classificacao}} | {{post.lancamento}}</p>
+                <p>{{post.categoria}}</p>
+                
+            </div>
+        </div>        
+    </section>
+
+    <section class="container">
+        <h2>Filmes Semelhantes</h2>
+
+        <div class="carousel-filmes">
+          {% for x in video %}
+            {% if post.categoria == x.categoria %}
+                <ul>
+                    <a class="items-filme" href="{% url 'movie-detail' x.uuid %}">
+                    <li class="items-filme">
+                        <img  class="items-filme" src="{{ x.capa_filme.url }}">
+                    </li>
+                    </a>
+                </ul>                    
+                {%endif%}        
+           {% endfor %}<!-- for dos filmes -->
         </div>
 
-        
-    </section>
-    <section>
-        <h2 class="titulo-filmes">
-            Filmes Semelhantes
-        </h2>
-        
-        <div class="carousel-asistidos">
 
+        <div class="demo_wrap">
 
-          {% for x in video %}
-          
-                {% if post.categoria == x.categoria %}
-
-                     <a class="total" href="{% url 'movie-detail' x.uuid %}">
-
-
-                    <div class="filmes">
-
-                    <img  class="filmes-capa" src="{{ x.capa_filme.url }}">
-                    </div>
-                </a>
-                {%endif%}
-
-        
-            {% endfor %}<!-- for dos filmes -->
+            <div class="subscribe">
+            <h1>Inscreva-se</h1>
+            <hr>            
+            <p>Inscreva-se para ficar por dentro das noticias do cinema receber informações dos filmes e series recentemente lançados</p>
+            <form>
+                <div class="form-group">
+                    
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                    <button type="button" class="btn btn me-2" style="background-color:#364D48;color: white;"><i class="fa fa-paper-plane-o"></i></button>
+                    
+                </div>
             </div>
-        
-          
 
+            
 
+            <img src="https://projeto-myflix.s3.amazonaws.com/icons/15858.jpg">
+            
+        </div>
 
-          
     </section>
-        
-        
+    
 </main>
 
 
 
+<script>
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          
+          videoId: '{{ post.id_video}}',          
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+      function onPlayerStateChange(event) {
+        
+      }
+    </script>
 {% include 'partials/footer.html'%}
 {% endblock%}

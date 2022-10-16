@@ -2,15 +2,13 @@
 <header id="cabecalho" class="p-3 bg-dark text-white">
       <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'index' %}">Myflix</a>
+      <a id="logo" class="navbar-brand" href="{% url 'index' %}">Myflix</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Series</a>
           </li>
@@ -26,9 +24,9 @@
           <input type="search" class="form-control form-control-dark" placeholder="Pesquisar..." aria-label="Search">
         </form>
 
-        <div id="botao-login">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+        <div id="botao-menu">
+          <button type="button" class="btn btn me-2" style="background-color:#FFFFFF;color: #364D48;" >Login</button>
+          <button type="button" class="btn btn me-2" style="background-color:#364D48;color: white;">Sign-up</button>
         </div>
 
     </div>

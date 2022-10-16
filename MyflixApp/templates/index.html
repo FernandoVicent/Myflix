@@ -5,17 +5,19 @@
       {% include 'partials/menu.html' %}
 
   <main class="conteudo">
-    <div class="apresentacao-slider">
+    <section class="container-principais">
+        
       <img src="https://cultura.minha.com.br/wp-content/uploads/sites/4/2021/11/HOMEM-ARANHA.jpg">
       <img src="https://static.brasilsemmedo.com/uploads/2022/05/30/maverick-1.jpg">
-      <img src="https://diariodorio.com/wp-content/uploads/2021/10/Duna-1.jpg">
-      <img src="https://cloud.estacaonerd.com/wp-content/uploads/2022/07/22192001/Agente-Oculto-Netflix-Irmaos-Russo-Posteres.jpg">
-    </div>
-
+      <img src="https://hbomax-images.warnermediacdn.com/images/GYrNiQQwpWMLDwwEAAADJ/tileburnedin?size=1280x720&partner=hbomaxcom&v=b6510bd2a9e02a1e345c5e7ffcdaa3d7&host=art-gallery.api.hbo.com&language=pt-br&w=1280">
+      <img src="https://odefensor.com.br/site/wp-content/uploads/2021/04/John-Wick-4.jpg">
+    
+    </section>
+    <section class="container">
         {%for c in generos %}
         <h2 class="titulo-filmes"> {{ c }}</h2>
 
-        <div class="carousel-asistidos">
+        <div class="carousel-filmes">
 
 
           {% for x in video %}
@@ -24,14 +26,13 @@
           {% if x.categoria == c   %}
 
 
-                     <a class="total" href="{{ x.uuid }}">
-
-
-                    <div class="filmes">
-
-                    <img  class="filmes-capa" src="{{ x.capa_filme.url }}">
-                    </div>
-                </a>
+                    <ul>
+                    <a href="{% url 'movie-detail' x.uuid %}">
+                    <li class="items-filme">
+                        <img  class="items-filme" src="{{ x.capa_filme.url }}">
+                    </li>
+                    </a>
+                </ul>                    
           {%endif%}
 
 
@@ -42,6 +43,32 @@
 
       </div>
       {% endfor %}<!--for do generos -->
+
+      <div class="demo_wrap">
+
+            <div class="subscribe">
+            <h1>Inscreva-se</h1>
+            <hr>            
+            <p>Inscreva-se para ficar por dentro das noticias do cinema receber informações dos filmes e series recentemente lançados</p>
+            <form>
+                <div class="form-group">
+                    
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                    <button type="button" class="btn btn me-2" style="background-color:#364D48;color: white;"><i class="fa fa-paper-plane-o"></i></button>
+                    
+                </div>
+            </div>
+
+            
+
+            <img src="https://projeto-myflix.s3.amazonaws.com/icons/15858.jpg">
+            
+        </div>
+
+    </section>
+    
+
+        
 
 
 

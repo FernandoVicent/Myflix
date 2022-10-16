@@ -1,108 +1,29 @@
-<html>
-<head>
-  <title>slick</title>
-                                              <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-                                            <!-- FONT AWESOME -->
-                                            <!--  fa-icons-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                                                <!-- SLICK -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
-    
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+{%for c in generos %}
+        <h2 class="titulo-filmes"> {{ c }}</h2>
 
-    <link rel="stylesheet" type="text/css" href="C:/Users/prod-fvsouza/PycharmProjects/servidor/css/style.css">
-    <link rel="stylesheet" type="text/css" href="C:/Users/prod-fvsouza/PycharmProjects/servidor/css/reset.css">
-    
-</head>
-<body>
-<header class="cabecalho">
-      <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
-      <a id="nav-logo" class="navbar-brand" href="#">Myflix</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="carousel-filmes">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Filmes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Series</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Desenhos</a>
-          </li>
-          <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categorias
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form id="form-pesquisa" class="form-inline my-2 my-lg-0">
-      <input id="pesquisa" class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-      <button id="btn-search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-    </form>
-      <i id="login" class="fa fa-user" aria-hidden="true"></i>
-    
-  </div>
-  </nav>
-</header>
-    
-  <main class="conteudo">
-    <div class="apresentacao-slider">
-      <img src="https://cultura.minha.com.br/wp-content/uploads/sites/4/2021/11/HOMEM-ARANHA.jpg">
-      <img src="https://static.brasilsemmedo.com/uploads/2022/05/30/maverick-1.jpg">
-      <img src="https://diariodorio.com/wp-content/uploads/2021/10/Duna-1.jpg">
-      <img src="https://cloud.estacaonerd.com/wp-content/uploads/2022/07/22192001/Agente-Oculto-Netflix-Irmaos-Russo-Posteres.jpg">
-    </div>
-  
-  <h3 class="titulo-filmes">Mais assistidos</h3>
-  <div class="carousel-asistidos">
 
-    <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
+          {% for x in video %}
 
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
 
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/5qoBMPkhmbDeTH8SEkY3V2flewD.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/uQWgSRXeYRWCvGIX9LDNBW6XBYD.jpg"></div>
-     
-     <div><img src="https://image.tmdb.org/t/p/w185/rMoVOCw6DF3zC6hS76ZhQMWiXNX.jpg"></div>
+          {% if x.categoria == c   %}
 
-    <div><img src="https://image.tmdb.org/t/p/w185/ir3cxdjrJJ1r127hCeGneBYe3fS.jpg"></div>
 
-    <div><img src="https://image.tmdb.org/t/p/w185/8niel2KjxfcOGmLWQc6p2fo5pUm.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/wWwTjKER5a8LRUGHrw86VU0gUy1.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"></div>
-    <div><img src="https://image.tmdb.org/t/p/w185/9E76j2DcQv8LdbX1Wa9jpbDBfw1.jpg"></div>
-    
-   
-   </div>
-   </main>
+                    <ul>
+                    <a href="{% url 'movie-detail' x.uuid %}">
+                    <li class="items-filme">
+                        <img  class="items-filme" src="{{ x.capa_filme.url }}">
+                    </li>
+                    </a>
+                </ul>                    
+          {%endif%}
 
 
 
+          {% endfor %}<!-- for dos filmes -->
 
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-
-    <script type="text/javascript" src="C:/Users/prod-fvsouza/PycharmProjects/servidor/js/action.js"></script>
-    
-</body>
-</html>
+      </div>
+      {% endfor %}<!--for do generos -->
