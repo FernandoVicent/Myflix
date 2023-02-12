@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Myflix_db',
         'USER':'postgres',
-        'PASSWORD':'fer1092',
+        'PASSWORD':'2579',
         'HOST':'localhost',
     }
 }
